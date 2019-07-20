@@ -5,7 +5,7 @@
 
     <groupId>org.MoneyManagement</groupId>>
     <artifactId>Ya$$</artifactId>
-    <version>3.6.2-SNAPSHOT</version>
+    <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Ya$$</name>
