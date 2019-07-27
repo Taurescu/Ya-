@@ -1,7 +1,7 @@
 package org.MoneyManagement.backend.service;
 
 import org.MoneyManagement.backend.entity.User;
-import org.MoneyManagement.backend.model.GeneralUserRequest;
+import org.MoneyManagement.backend.controller.model.GeneralUserRequest;
 
 import java.util.List;
 

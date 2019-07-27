@@ -1,7 +1,7 @@
 package org.MoneyManagement.backend.controller;
 
 import org.MoneyManagement.backend.entity.User;
-import org.MoneyManagement.backend.model.GeneralUserRequest;
+import org.MoneyManagement.backend.controller.model.GeneralUserRequest;
 import org.MoneyManagement.backend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

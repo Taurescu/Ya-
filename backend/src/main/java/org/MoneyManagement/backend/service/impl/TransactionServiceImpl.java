@@ -24,4 +24,9 @@ public class TransactionServiceImpl implements TransactionService {
     public List<TransactionType> findByUser(User user) {
         return transactionTypeDao.findByUser(user);
     }
+
+    @Override
+    public TransactionType createTransactionType(TransactionType transactionType) {
+        return transactionTypeDao.save(transactionType);
+    }
 }

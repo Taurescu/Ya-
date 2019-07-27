@@ -9,6 +9,5 @@ public interface TransactionService {
 
     List<TransactionType> findByUser(User user);
 
-
-
+    TransactionType createTransactionType(TransactionType transactionType);
 }

@@ -1,4 +1,4 @@
-package org.MoneyManagement.backend.model;
+package org.MoneyManagement.backend.controller.model;
 
 import org.MoneyManagement.backend.entity.ExpenseType;
 import org.MoneyManagement.backend.entity.TransactionType;
