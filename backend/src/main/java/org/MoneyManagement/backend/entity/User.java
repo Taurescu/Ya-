@@ -28,9 +28,6 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<TransactionType> transactionTypes;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<Transaction> transactions;
-
     public String getId() {
         return this.id;
     }
@@ -85,13 +82,5 @@ public class User {
 
     public void setTransactionTypes(List<TransactionType> transactionTypes) {
         this.transactionTypes = transactionTypes;
-    }
-
-    public List<Transaction> getTransactions() {
-        return this.transactions;
-    }
-
-    public void setTransactions(List<Transaction> transactions) {
-        this.transactions = transactions;
     }
 }
