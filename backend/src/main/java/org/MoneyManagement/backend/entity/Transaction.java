@@ -18,10 +18,6 @@ public class Transaction {
     @JoinColumn(name = "expense_type_id", nullable = false)
     private ExpenseType expenseType;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "user_id", nullable = false)
-    private User user;
-
     private Float amount;
 
     private Date createdAt;
@@ -48,14 +44,6 @@ public class Transaction {
 
     public void setExpenseType(ExpenseType expenseType) {
         this.expenseType = expenseType;
-    }
-
-    public User getUser() {
-        return this.user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 
     public Float getAmount() {
