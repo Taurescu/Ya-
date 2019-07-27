@@ -6,7 +6,7 @@ import org.MoneyManagement.backend.entity.TransactionType;
 import java.util.Date;
 import java.util.List;
 
-public class UserDTO {
+public class GeneralUserRequest {
 
 
     private String id;
@@ -78,5 +78,4 @@ public class UserDTO {
     public void setTransactionTypes(List<TransactionType> transactionTypes) {
         this.transactionTypes = transactionTypes;
     }
-    
 }
