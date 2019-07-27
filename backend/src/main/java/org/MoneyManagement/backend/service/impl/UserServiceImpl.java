@@ -61,36 +61,37 @@ public class UserServiceImpl implements UserService {
     @Override
     public User editUser(GeneralUserRequest request) {
         User tempUser = new User();
-        User tempUpdatedUser = new User;
+        User tempUpdatedUser = new User();
         String userId = request.getId();
 
         if (userId != null) {
-            tempUser = userDao.findById(userId);
-            tempUser.setName(request.getName());
-            tempUser.setPassword(request.getPassword());
-            tempUser.setUserName(request.getUserName());
+            tempUser = userDao.findById(userId).orElse(null);
+            if (tempUser != null) {
+                tempUser.setName(request.getName());
+                tempUser.setPassword(request.getPassword());
+                tempUser.setUserName(request.getUserName());
 
-            tempUpdatedUser = userDao.save(tempUser);
+                tempUpdatedUser = userDao.save(tempUser);
 
-            if(tempUser.equalsNew(tempUpdatedUser) == true )
-            {
-                /*User saved correctly, Nothing to do*/
-            } else {
-                /*Handle user not saved correctly*/
+                if (tempUser.equalsNew(tempUpdatedUser) == true) {
+                    /*User saved correctly, Nothing to do*/
+                } else {
+                    /*Handle user not saved correctly*/
+                }
             }
         } else {
             /*AleTau: Handle id = null exception*/
         }
-    return tempUpdatedUser;
+        return tempUpdatedUser;
     }
 
     @Override
-    public User getUserbyId(String id) {
-        return userDao.findById(id);
+    public User getUserById(String id) {
+        return userDao.findById(id).orElse(null);
     }
 
     @Override
-    public User getUserbyName(String name) {
+    public User getUserByName(String name) {
         return null;
     }
 }

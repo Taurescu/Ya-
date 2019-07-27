@@ -15,8 +15,8 @@ public interface UserService {
 
     User editUser(GeneralUserRequest request);
 
-    User getUserbyId(String id);
+    User getUserById(String id);
 
-    User getUserbyName(String name);
+    User getUserByName(String name);
 
 }
