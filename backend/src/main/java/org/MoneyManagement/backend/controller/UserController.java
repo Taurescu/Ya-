@@ -41,9 +41,15 @@ public class UserController {
         return userService.editUser(generalUserRequest);
     }
 
-    @RequestMapping(path = "/{id}", method = RequestMethod.GET)
-    public @ResponseBody User getUsebById(@PathVariable String id)
+    @RequestMapping(path = "/id/{id}", method = RequestMethod.GET)
+    public @ResponseBody User getUserById(@PathVariable String id)
     {
         return userService.getUserById(id);
+    }
+
+    @RequestMapping(path = "/name/{name}", method = RequestMethod.GET)
+    public @ResponseBody User getUserByName(@PathVariable String name)
+    {
+        return userService.getUserByName(name);
     }
 }
